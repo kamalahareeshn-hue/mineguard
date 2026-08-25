@@ -2,6 +2,9 @@
   "name": "mineguard",
   "version": "1.0.0",
   "private": true,
+  "workspaces": [
+    "my-app"
+  ],
   "scripts": {
     "dev": "npm run dev --prefix my-app",
     "build": "npm run build --prefix my-app",
