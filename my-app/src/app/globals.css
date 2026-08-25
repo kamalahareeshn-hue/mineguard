@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+html {
+    background-color: #090A0C;
+}
+
+body {
+    margin: 0;
+    font-family: 'IBM Plex Sans', sans-serif;
+    background-color: #090A0C;
+    color: #FFFFFF;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.font-heading {
+    font-family: 'Manrope', sans-serif;
+    letter-spacing: -0.02em;
+}
+
+.font-mono-data {
+    font-family: 'JetBrains Mono', monospace;
+    font-feature-settings: "tnum" 1;
+    letter-spacing: -0.02em;
+}
+
+/* Subtle noise texture overlay used sparingly */
+.noise-bg {
+    position: relative;
+}
+.noise-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@keyframes emergency-pulse {
+    0%, 100% { box-shadow: inset 0 0 0 2px rgba(239, 68, 68, 0.9); }
+    50% { box-shadow: inset 0 0 0 2px rgba(239, 68, 68, 0.35); }
+}
+.emergency-active {
+    animation: emergency-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes soft-flash {
+    0% { color: #FBBF24; }
+    100% { color: inherit; }
+}
+.value-flash {
+    animation: soft-flash 900ms ease-out;
+}
+
+@keyframes live-dot {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.35; }
+}
+.live-dot {
+    animation: live-dot 1.4s ease-in-out infinite;
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: #0f1115; }
+::-webkit-scrollbar-thumb { background: #262a33; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #363b47; }
+
+:root {
+    --background: 220 15% 5%;
+    --foreground: 0 0% 100%;
+    --card: 222 14% 9%;
+    --card-foreground: 0 0% 100%;
+    --popover: 222 14% 9%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 10% 15%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 220 10% 12%;
+    --muted-foreground: 220 5% 65%;
+    --accent: 220 10% 15%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 100% / 0.1;
+    --input: 220 10% 15%;
+    --ring: 217 91% 60%;
+    --radius: 0.25rem;
+}
+
+* {
+    border-color: rgba(255, 255, 255, 0.1);
+}
