@@ -6,7 +6,7 @@ import { computeRisk, statusFromSensor } from '../simulation/riskEngine';
 const AppContext = createContext(null);
 export const useApp = () => useContext(AppContext);
 
-const LS_KEY = 'mineguard.state.v1';
+const LS_KEY = 'deepshield.state.v1';
 
 const nextId = (prefix) => `${prefix}-${Math.floor(1000 + Math.random() * 9000)}`;
 

@@ -1,4 +1,4 @@
-// Centralized mock/seed data for MineGuard AI simulation
+// Centralized mock/seed data for DeepShield AI simulation
 
 export const MINES = [
   { id: 'jharia-01', name: 'Jharia Coalfield - Block A', region: 'Jharkhand' },

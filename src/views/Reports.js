@@ -30,7 +30,7 @@ export default function Reports() {
     const t = TYPES.find((x) => x.id === type)?.label;
     let body = '';
     body += '============================================================\n';
-    body += ' MineGuard AI — ' + t.toUpperCase() + '\n';
+    body += ' DeepShield AI — ' + t.toUpperCase() + '\n';
     body += '============================================================\n\n';
     body += line('Mine', mineName);
     body += line('Report Type', t);
@@ -82,7 +82,7 @@ export default function Reports() {
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `mineguard-${type}-${Date.now()}.txt`;
+    a.download = `deepshield-${type}-${Date.now()}.txt`;
     a.click();
     URL.revokeObjectURL(url);
     toast.success('Report downloaded');
@@ -92,7 +92,7 @@ export default function Reports() {
     if (!preview) return;
     const w = window.open('', '_blank');
     w.document.write(`<pre style="font-family: 'JetBrains Mono', monospace; padding: 24px; white-space: pre-wrap;">${preview.replace(/</g, '&lt;')}</pre>`);
-    w.document.title = 'MineGuard Report';
+    w.document.title = 'DeepShield Report';
     w.print();
   };
 

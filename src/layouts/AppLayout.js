@@ -29,7 +29,7 @@ const Sidebar = ({ open, onClose }) => (
           <Shield size={18} strokeWidth={2} className="text-white" />
         </div>
         <div>
-          <div className="font-heading font-bold text-[15px] leading-none">MineGuard AI</div>
+          <div className="font-heading font-bold text-[15px] leading-none">DeepShield AI</div>
           <div className="text-[10px] tracking-[0.18em] text-zinc-500 mt-1">SENSE · ANALYZE · PROTECT</div>
         </div>
         <button className="ml-auto lg:hidden text-zinc-400" onClick={onClose}><X size={18} /></button>

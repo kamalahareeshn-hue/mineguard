@@ -25,7 +25,7 @@ export default function Login() {
   const submit = (e) => {
     e.preventDefault();
     if (login(username.trim(), password)) {
-      toast.success('Login successful', { description: 'Welcome to MineGuard AI' });
+      toast.success('Login successful', { description: 'Welcome to DeepShield AI' });
       navigate('/app/dashboard');
     } else {
       toast.error('Invalid credentials', { description: 'Use any demo account shown on this page.' });
@@ -52,7 +52,7 @@ export default function Login() {
             <Shield size={22} className="text-white" />
           </div>
           <div>
-            <div className="font-heading font-bold text-2xl leading-tight">MineGuard AI</div>
+            <div className="font-heading font-bold text-2xl leading-tight">DeepShield AI</div>
             <div className="text-[11px] tracking-[0.22em] text-zinc-400">SENSE · ANALYZE · PROTECT</div>
           </div>
         </div>
@@ -86,7 +86,7 @@ export default function Login() {
               <Shield size={18} className="text-white" />
             </div>
             <div>
-              <div className="font-heading font-bold text-lg leading-none">MineGuard AI</div>
+              <div className="font-heading font-bold text-lg leading-none">DeepShield AI</div>
               <div className="text-[10px] tracking-[0.22em] text-zinc-400 mt-1">SENSE · ANALYZE · PROTECT</div>
             </div>
           </div>
